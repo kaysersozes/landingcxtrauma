@@ -38,6 +38,15 @@
                     },
                     backgroundImage: {
                         'hero-pattern': "url('https://images.unsplash.com/photo-1579684385180-33a75c35f8d7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3')",
+                    },
+                    animation: {
+                        scroll: 'scroll 30s linear infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
                     }
                 }
             }
@@ -150,8 +159,8 @@
             </div>
 
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight text-slate-900">
-                Tu práctica médica,<br>
-                <span class="text-gradient">simplificada y digital.</span>
+                Aumenta tu actividad quirúrgica<br>
+                <span class="text-gradient">con trazabilidad completa</span>
             </h1>
 
             <p class="mt-6 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -171,24 +180,133 @@
                 </a>
             </div>
 
+            <!-- Trusted Centers (Marquee) -->
+            <div class="mt-12 border-t border-slate-200/60 pt-8 w-full overflow-hidden">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-6">Confían en
+                    nosotros los mejores centros</p>
 
-        </div>
-    </section>
-
-    <!-- Social Proof Section -->
-    <section class="py-10 border-y border-slate-100 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm font-semibold text-slate-500 uppercase tracking-wider mb-8">Confían en
-                nosotros los mejores centros</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 transition-all duration-500">
-                <img src="imagenes/Vvergara.png" alt="Centro Quinta Vergara" class="h-20 w-auto object-contain">
-                <img src="imagenes/CTQ.png" alt="CTQ" class="h-20 w-auto object-contain">
-                <img src="imagenes/INSI.png" alt="INSI" class="h-20 w-auto object-contain">
-                <img src="imagenes/KXS.png" alt="KXS" class="h-20 w-auto object-contain">
-                <img src="imagenes/Oxigeno.png" alt="Oxígeno" class="h-20 w-auto object-contain">
+                <div
+                    class="relative w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                    <!-- Original Set -->
+                    <div
+                        class="flex items-center justify-center md:justify-start [&_img]:mx-8 [&_img]:max-w-none animate-scroll">
+                        <img src="imagenes/LogoCTQ.png" alt="CTQ" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoOxigeno.png" alt="Oxígeno" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoINSI.png" alt="INSI" class="h-12 w-auto object-contain">
+                        <!-- Duplicate content to ensure smooth loop if screen is wide -->
+                        <img src="imagenes/LogoCTQ.png" alt="CTQ" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoOxigeno.png" alt="Oxígeno" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoINSI.png" alt="INSI" class="h-12 w-auto object-contain">
+                    </div>
+                    <!-- Duplicate Set for Marquee Effect -->
+                    <div class="flex items-center justify-center md:justify-start [&_img]:mx-8 [&_img]:max-w-none animate-scroll"
+                        aria-hidden="true">
+                        <img src="imagenes/LogoCTQ.png" alt="CTQ" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoOxigeno.png" alt="Oxígeno" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoINSI.png" alt="INSI" class="h-12 w-auto object-contain">
+                        <!-- Duplicate content to ensure smooth loop if screen is wide -->
+                        <img src="imagenes/LogoCTQ.png" alt="CTQ" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoOxigeno.png" alt="Oxígeno" class="h-12 w-auto object-contain">
+                        <img src="imagenes/LogoINSI.png" alt="INSI" class="h-12 w-auto object-contain">
+                    </div>
+                </div>
             </div>
+
+            <!-- Split Section: App Preview & Key Benefits -->
+            <div class="mt-20 mx-auto max-w-7xl px-4">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                    <!-- Left Column: Flat Browser Window (Smaller) -->
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-xl bg-slate-900 shadow-xl ring-1 ring-slate-900/10">
+                            <!-- Browser Header -->
+                            <div
+                                class="flex items-center gap-2 px-4 py-3 bg-slate-800 rounded-t-xl border-b border-slate-700/50">
+                                <div class="flex gap-2">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                                </div>
+                                <div class="flex-1 mx-4">
+                                    <div
+                                        class="mx-auto max-w-[200px] bg-slate-700/50 h-5 rounded flex items-center justify-center text-[10px] text-slate-400 font-mono">
+                                        cxtrauma.com
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Content -->
+                            <div class="rounded-b-xl overflow-hidden bg-slate-900">
+                                <img src="imagenes/cxtrauma1.jpg" alt="Plataforma CX-Trauma"
+                                    class="w-full h-auto object-cover opacity-95">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Key Benefits (Expanded) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <!-- Benefit 1 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-1">Retorno Asegurado</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Sistema diseñado para asegurar el retorno del paciente que obtiene orden de
+                                    resonancia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary-600" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-1">Filtrado Inteligente</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Filtra y optimiza pacientes que realmente requieren atención especializada.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-1">Gestión Basada en Datos</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Entrega información valiosa para tomar decisiones estratégicas sobre tu agenda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
+
+
 
     <!-- Value Proposition (Benefits) -->
     <section id="beneficios" class="py-24 bg-slate-50 relative overflow-hidden">
